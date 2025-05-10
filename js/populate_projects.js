@@ -106,7 +106,7 @@ class DescItem {
     }
 }
 
-function populateProjectContainers() {
+function main() {
     const container = document.querySelector("#project-container");
     fetch("json/projects.json")
         .then((res) => res.json())
@@ -119,7 +119,7 @@ function populateProjectContainers() {
                 const project = Project.fromJson(jsonProject);
                 container.appendChild(project.asNode());
             });
-        })
+        });
 }
 
-populateProjectContainers();
+main();
