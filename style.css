@@ -102,6 +102,12 @@ main {
     width: 400px;
 }
 
+@media (max-width: 600px) {
+    #nav-bar.visible #nav-items {
+        width: calc(100vw - 40px);
+    }
+}
+
 #nav-items ul {
     display: block;
     list-style: none;
